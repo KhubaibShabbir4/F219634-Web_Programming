@@ -1,0 +1,30 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Find total width of an element (including width, padding and border) in
+      jQuery.
+    </title>
+    <style>
+      p {
+        padding-top: 50px;
+        padding-right: 30px;
+        padding-bottom: 50px;
+        padding-left: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="myText">jQuery Exercises, Practice, Solution</p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        alert(`Element Width : ${$(
+          "#myText"
+        ).width()}\nElement Width : ${$("#myText").height()}\nElement Padding : ${$("#myText").css("padding")}\nElement Border : ${$("#myText").css("border")}\n
+        `);
+      });
+    </script>
+  </body>
+</html>

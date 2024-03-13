@@ -1,0 +1,39 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="img">Select image : </label>
+    <input type="file" name="img" id="img" accept="image/*" required />
+    <button id="toggleButton" type="button">Show Image</button>
+    <img
+      id="preview"
+      src=""
+      alt="Image Preview"
+      style="display: none; width: 100%"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#img").change(function () {
+          var reader = new FileReader();
+          reader.onload = function (param) {
+            $("#preview").attr("src", param.target.result);
+          };
+          reader.readAsDataURL(this.files[0]);
+        });
+
+        $("#toggleButton").click(function () {
+          $("#preview").toggle();
+          if ($("#preview").is(":visible")) {
+            $("#toggleButton").text("Hide Image");
+          } else {
+            $("#toggleButton").text("Show Image");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-git.js"></script>
+    <title>Count child elements using jQuery.</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #redbox {
+        position: relative;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="redbox"></div>
+    <script>
+      $(document).ready(function () {
+        $("#redbox").animate(
+          {
+            right: "500px",
+          },
+          2000,
+          function () {
+            // Animation complete, move it back
+            $("#redbox").animate({ left: "500px" }, 2000, function () {
+              $("#redbox").animate(
+                {
+                  left: "0px",
+                },
+                2000
+              );
+            });
+          }
+        );
+      });
+    </script>
+  </body>
+</html>
