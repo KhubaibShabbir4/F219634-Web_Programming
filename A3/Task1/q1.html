@@ -2,28 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name= "viewport" content="width=device-width, initial-scale=1.0">
     <title>Khubaib Shabbir- Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $(window).scroll(function() {
-                $('.project').each(function() {
-                    var position = $(this).offset().top;
-                    var scrollPosition = $(window).scrollTop();
-                    var windowHeight = $(window).height();
-
-                    // Check if the project is in the viewport
-                    if (position < scrollPosition + windowHeight - 100) {
-                        $(this).addClass('visible');
-                    } else {
-                        $(this).removeClass('visible');
-                    }
-                });
-            });
-        });
-    </script>
+    <script defer src="q1.js"></script>
 </head>
 <body>
     <header>

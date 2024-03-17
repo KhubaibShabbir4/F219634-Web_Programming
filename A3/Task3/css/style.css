@@ -1,0 +1,80 @@
+:root {
+  /*Colors*/
+  --1st-color: #222831;
+  --2nd-color: #393e46;
+  --3rd-color: #00adb5;
+  --4th-color: #eeeeee;
+
+  /* Border radius */
+
+  --br: 0.5rem;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  background-color: var(--1st-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--3rd-color);
+}
+
+p {
+  color: var(--4th-color);
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  color: var(--3rd-color);
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--2nd-color);
+  color: var(--4th-color);
+  border-radius: var(--br);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#date {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+}
+
+.colon {
+  font-size: 2rem;
+  margin: 0 10px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", monospace;
+}
+
+#hours,
+#minutes,
+#seconds {
+  text-align: center;
+  font-family: "Poppins", monospace;
+}
